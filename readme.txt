@@ -1,10 +1,8 @@
 Readme.txt
-Spencer Kamchee
-CSPP 51040
-Homework 4 
 Poker game
 
-I did not attempt the extra credit. I used the linear scale as described in the Monte Carlo pdf
+A five-card draw poker game written in C. One human player and 3 AI opponents.
+AI programmed using Monte Carlo simulation technique. 
 
 ===========================
 Functionality:
@@ -12,8 +10,7 @@ Functionality:
 Run the simulation using the following command line input:
 ./pokergame 1000
 The number 1000 can be varied. It is an argument containing the number of simulations to run per discard option. 
-(There are 32 discard combinations as described on Piazza by A. Siegel)
-So inputting 1000 will run 32,000 simulations per hand, which takes about 4.6 seconds on my Macbook Air. 
+So inputting 1000 will run 32,000 simulations per hand, which takes about 4.6 seconds on a Macbook Air. 
 I have found I can get correct Monte Carlo logic even at 200 simulations and the game runs significantly faster (<1 sec response time)
 
 ===========================
@@ -40,15 +37,6 @@ Implementing tie-breaking requires introducing some logic to split the pool winn
 In this way, the human player can typically win all the bets the computer players made in round 1. This is because the computer players only bet on a scale linked to the expected value of their cards. The computer bets high when it has good cards, and low when it has bad cards. There isn't any mechanism for the computer to guess if someone is bluffing.
  
 Since the betting features are independent of the project grade, I didn't go into these additional features.
-
-===========================
-Outside sources:
-===========================
-I needed a combinations algorithm for the 32 different possible discards options available to the player,
-which I used in the mc_card_combinations function in mcadvisor.c
-I read the following post to help me write it. I didn't copy directly from it but used the logic as guidance.
-One particular post hardwired the number of elements to combine over. I didn't want to do that, so I wrote it recursively.
-http://stackoverflow.com/questions/127704/algorithm-to-return-all-combinations-of-k-elements-from-n
 
 ===========================
 Documentation:
