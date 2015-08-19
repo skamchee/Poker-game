@@ -5,6 +5,24 @@ A five-card draw poker game written in C. One human player and 3 AI opponents.
 AI programmed using Monte Carlo simulation technique. 
 
 ===========================
+Build:
+===========================
+In Terminal:
+
+make clean
+make
+
+OR
+
+gcc -Wall -c card.c -I.
+gcc -Wall -c deck.c -I.
+gcc -Wall -c hand.c -I.
+gcc -Wall -c player.c -I.
+gcc -Wall -c mcadvisor.c -I.
+gcc -Wall -c pokergame.c -I.
+gcc -Wall -o pokergame pokergame.o card.o deck.o hand.o player.o mcadvisor.o
+
+===========================
 Functionality:
 ===========================
 Run the simulation using the following command line input:
